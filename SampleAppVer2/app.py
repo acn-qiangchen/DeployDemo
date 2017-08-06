@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template('index.html', hostname=socket.gethostname())
+    return render_template('index.html', clientname=request.host, servername=socket.gethostname())
 
 
 if __name__ == "__main__":
